@@ -3,6 +3,8 @@
 
 -- print('hola from user.init')
 
+vim.api.nvim_set_option("clipboard", "unnamed")
+ 
 local config = {
 
 	-- colorscheme = "nord",
