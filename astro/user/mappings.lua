@@ -141,14 +141,6 @@ map({ "n" }, "<leader>;w", "<cmd>w<CR>")
 
 map({ "n" }, "<C-[>", "<C-[>:w<CR>");
 
-map("n", "gf", function()
-  print("YOBABA", require("obsidian").util.cursor_on_markdown_link())
-  if require("obsidian").util.cursor_on_markdown_link() then
-    return cmd_async("<cmd>ObsidianFollowLink<CR>")
-  else
-    return cmd_async("gf")
-  end
-end)
 
 map("n", "<leader>r", "<cmd>ToggleTerm direction=float<cr><C-c><CR><UP><CR><cmd>ToggleTerm<cr>")
 
@@ -210,7 +202,7 @@ M.n['cc'] = '"_cc'
 M.v['c'] = '"_c'
 
 -- config related
-map('n', '\\e', ':!gnome-terminal -- /bin/bash -c "cd ~/.config/nvim/lua && nvim user/mappings.lua"<CR>')
+map('n', '\\e', ':!gnome-terminal --working-directory ~/.config/nvim/lua --window -- nvim user/mappings.lua<CR>')
 map('n', '\\r', function()
   require('user.custom.reload').ReloadConfig()
 end)

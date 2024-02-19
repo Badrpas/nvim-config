@@ -17,6 +17,8 @@ return {
 			-- load snippets paths
 			require("luasnip").add_snippets("typescript", require("user.snippets.typescript"))
 			require("luasnip").add_snippets("rust", require("user.snippets.rust"))
+			require("luasnip").add_snippets("c", require("user.snippets.c"))
+			require("luasnip").add_snippets("cpp", require("user.snippets.c"))
 		end,
 	},
 
